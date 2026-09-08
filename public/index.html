@@ -30,18 +30,18 @@
         <div id="app">
             <h2>Generate the questions:</h2>
             <p>Fill up the form about info about you and the questions then the questions are gonna be displayed!!!!!</p>
-            <form action="">
+            <form action="/save" method="post" id="form">
                 <label for="Name" id="yourname"><h3>Your Name:</h3></label> 
                 <input type="text" name="Name" id="Name">
                 <label id="category"><h3>Category:</h3></label> 
                 <div id="radios">
-                 <input type="radio" name="1" value="Science" class="categories"> 
+                 <input type="radio" name="categoryy" value="Science" class="categories"> 
                 <label for="Science">Science</label> <br>
-                <input type="radio" name="1" value="Maths" class="categories">
+                <input type="radio" name="categoryy" value="Maths" class="categories">
                 <label for="Maths">Maths</label> <br>
-                <input type="radio" name="1" value="History" class="categories">
+                <input type="radio" name="categoryy" value="History" class="categories">
                 <label for="History">History</label><br>
-                <input type="radio" name="1" value="Geography" class="categories">
+                <input type="radio" name="categoryy" value="Geography" class="categories">
                 <label for="Geography">Geography</label><br>
                 </div> 
                 <button type="submit">Submit!!</button>
@@ -49,7 +49,7 @@
         </div>
 
         <div id="result">
-            <!--laterrrrr-->
+
         </div>
     </div>
     <script src="./script.js"></script>
