@@ -5,9 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Generator</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div id="header">
+        <header>
+            <h2 id="logo">Quiz Generator</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li id="needbg"><a href="#app">Generate</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div id="main">
+        <div id="about">
+            <h2 id="aboutone">About the generator app</h2>
+            <p>Quiz Generator is a simple web app made by using HTML, CSS, JS, Node.JS, ExpressJs by me (Aazooz Gyawali) :D. This is a simple application where the user selects their category and send the request to backend then the backend selects the required question as per the category and sends it to the user. This can be used to practise your general knowledge and all so that you be smarter >3. You can just simply fill up the form below and get your questions ready!!!!</p>
+        </div>
+
+        <div id="app">
+            <h2>Generate the questions:</h2>
+            <p>Fill up the form about info about you and the questions then the questions are gonna be displayed!!!!!</p>
+            <form action="">
+                <label for="Name" id="yourname"><h3>Your Name:</h3></label> 
+                <input type="text" name="Name" id="Name">
+                <label id="category"><h3>Category:</h3></label> 
+                <div id="radios">
+                 <input type="radio" name="1" value="Science" class="categories"> 
+                <label for="Science">Science</label> <br>
+                <input type="radio" name="1" value="Maths" class="categories">
+                <label for="Maths">Maths</label> <br>
+                <input type="radio" name="1" value="History" class="categories">
+                <label for="History">History</label><br>
+                <input type="radio" name="1" value="Geography" class="categories">
+                <label for="Geography">Geography</label><br>
+                </div> 
+                <button type="submit">Submit!!</button>
+            </form>
+        </div>
+
+        <div id="result">
+            <!--laterrrrr-->
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>

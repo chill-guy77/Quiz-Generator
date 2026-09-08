@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0B0F19;
+    color: #F1F5F9;
+    font-family: "Poppins",  sans-serif;
+
+}
+header{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E293B;
+    height: 50px;
+    border: 3px solid rgb(2, 2, 83);
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    position: absolute;
+    right: 50px;
+}
+li{
+    width: 50px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-style: bold;
+}
+#logo{
+    position: absolute;
+    left: 30px; 
+}
+#about, #app{
+    margin-top: 50px;
+    background-color: #1E293B;   
+    height: 200px;
+    padding: 10px;
+}
+#aboutone, #app h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 27px;
+}
+#about p, #app p{
+    font-size: 18px;
+}
+#app{
+    height: 470px;
+}
+#app p{
+    margin-left: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1E293B;
+    margin: 20px;
+    height: 280px;
+}
+#category{
+    text-indent: -140px;
+    margin-top: 10px;
+}
+#yourname{
+    text-indent: -140px;
+    margin-bottom: 7px;
+}
+input[type="text"]{
+    height: 25px;
+    font-family: "Poppins", sans-serif;
+    font-style: bold;
+    margin-bottom: 7px;
+}
+form button{
+    width: 70px;
+    height: 25px;
+    background-color: #6366F1;
+    margin-left: 130px;
+    margin-top: 10px;
+}
+#result{
+    display: none;
+}
