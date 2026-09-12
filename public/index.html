@@ -31,9 +31,12 @@
             <h2>Generate the questions:</h2>
             <p>Fill up the form about info about you and the questions then the questions are gonna be displayed!!!!!</p>
             <form action="/save" method="post" id="form">
+
                 <label for="Name" id="yourname"><h3>Your Name:</h3></label> 
                 <input type="text" name="Name" id="Name">
+
                 <label id="category"><h3>Category:</h3></label> 
+
                 <div id="radios">
                  <input type="radio" name="categoryy" value="Science" class="categories"> 
                 <label for="Science">Science</label> <br>
@@ -42,8 +45,23 @@
                 <input type="radio" name="categoryy" value="History" class="categories">
                 <label for="History">History</label><br>
                 <input type="radio" name="categoryy" value="Geography" class="categories">
-                <label for="Geography">Geography</label><br>
+                <label for="Geography">Geography</label><br><br>
                 </div> 
+
+                <label for="limit" id="limit"><h3>Limit: </h2></label> 
+                <input type="number"> <br>
+
+                <label id="difficulty"> <h3>Difficulty:</h3></label>
+                <div id="radio2">
+                <input type="radio" name="difficulty" value="easy" class="difficulties">
+                <label for="easy">Easy</label><br>
+                <input type="radio" name="difficulty" value="moderate" class="difficulties">
+                <label for="moderate">Moderate</label> <br>
+                <input type="radio" name="difficulty" value="hard" class="difficulties">
+                <label for="hard">Hard</label>
+
+
+                </div>
                 <button type="submit">Submit!!</button>
             </form>
         </div>
