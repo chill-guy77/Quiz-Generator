@@ -33,31 +33,31 @@
             <form action="/save" method="post" id="form">
 
                 <label for="Name" id="yourname"><h3>Your Name:</h3></label> 
-                <input type="text" name="Name" id="Name">
+                <input type="text" name="Name" id="Name" required>
 
                 <label id="category"><h3>Category:</h3></label> 
 
                 <div id="radios">
-                 <input type="radio" name="categoryy" value="Science" class="categories"> 
+                 <input type="radio" name="categoryy" value="Science" class="categories" required> 
                 <label for="Science">Science</label> <br>
-                <input type="radio" name="categoryy" value="Maths" class="categories">
+                <input type="radio" name="categoryy" value="Maths" class="categories" required>
                 <label for="Maths">Maths</label> <br>
-                <input type="radio" name="categoryy" value="History" class="categories">
+                <input type="radio" name="categoryy" value="History" class="categories" required>
                 <label for="History">History</label><br>
-                <input type="radio" name="categoryy" value="Geography" class="categories">
+                <input type="radio" name="categoryy" value="Geography" class="categories" required>
                 <label for="Geography">Geography</label><br><br>
                 </div> 
 
-                <label for="limit" id="limit"><h3>Limit: </h2></label> 
-                <input type="number"> <br>
+                <label for="limit" id="limit" ><h3>Limit: </h2></label> 
+                <input type="number" required> <br>
 
                 <label id="difficulty"> <h3>Difficulty:</h3></label>
                 <div id="radio2">
-                <input type="radio" name="difficulty" value="easy" class="difficulties">
+                <input type="radio" name="difficulty" value="easy" class="difficulties" required>
                 <label for="easy">Easy</label><br>
-                <input type="radio" name="difficulty" value="moderate" class="difficulties">
+                <input type="radio" name="difficulty" value="moderate" class="difficulties" required>
                 <label for="moderate">Moderate</label> <br>
-                <input type="radio" name="difficulty" value="hard" class="difficulties">
+                <input type="radio" name="difficulty" value="hard" class="difficulties" required>
                 <label for="hard">Hard</label>
 
 

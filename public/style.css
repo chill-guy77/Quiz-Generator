@@ -15,7 +15,7 @@ header{
     justify-content: center;
     align-items: center;
     background-color: #1E293B;
-    height: 50px;
+    height: 65px;
     border: 3px solid rgb(2, 2, 83);
 }
 ul{
@@ -93,7 +93,8 @@ input[type="text"]{
 }
 form button, button{
     width: 70px;
-    height: 25px;
+    height: 40px;
+    border-radius: 9px;
     background-color: #6366F1;
     margin-left: 130px;
     margin-top: 10px;
@@ -107,4 +108,13 @@ form button, button{
     padding: 10px;
     border-radius: 10px;
     padding-left: 10px;
+}
+.answers{
+    margin-top: 5px;
+}
+#showanswer, #remove-output{
+    margin: 20px;
+}
+#showanswer{
+    width: 111px;
 }

@@ -1864,6 +1864,23 @@
     "answer": "30km",
     "category": "Maths",
     "difficulty": "moderate"
+  },
+  {
+    "question": "What is the formula for (a-b)2?",
+    "answer": "a2 + 2ab + b2",
+    "category": "Maths",
+    "difficulty": "moderate"
+  },
+  {
+    "question": "Which country is known as the 7th largest country by area?",
+    "answer": "India",
+    "category": "Geography",
+    "difficulty": "moderate"
+  },
+  {
+    "question": "What were the japanese cities that got bombed during World War 2 by USA?",
+    "answer": "Hiroshima and Nagasaki",
+    "category": "History",
+    "difficulty": "easy"
   }
-
   ]

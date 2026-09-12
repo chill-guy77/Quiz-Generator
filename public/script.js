@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const difficulty = formdata.get("difficulty");
         const result = document.querySelector('#result');
         console.log("limit");
-        if(limit>20){
-            alert("Please enter a value under 20!");
+        if(limit>20 || limit<0){
+            alert("Please enter a value from 1 to 20!");
         }else{
             submitt.disabled= true;
         console.log(name);
@@ -36,12 +36,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 console.log(name);
         document.querySelector("#result").style.visibility = "visible";
         document.querySelector("#questions-result").style.visibility = "visible";
-        const rp = document.querySelector("#result-p")
+        const rp = document.querySelector("#result-p");
         rp.style.display = "revert";
-        rp.innerHTML = `Here are your questions <b> ${namee} </b>`;
+        rp.innerHTML = `Here are your questions, <b> ${namee} </b>:`;
                 const remove = `
                 <button id="remove-output"> Remove </button>
-                `
+                `;
+                const showanswerbtn = `
+                <button id="showanswer" style="white-space:nowrap">
+                Show Answers
+                </button>
+                `;
     for(let i=0; i<questions.length;i++){
         const result5 = ` <br>
         <div class= "actualquestions">
@@ -52,12 +57,26 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
     const result2 = document.querySelector("#result");
     document.querySelector("#result").insertAdjacentHTML('beforeend',remove);
+    document.querySelector('#result').insertAdjacentHTML('beforeend', showanswerbtn);
+
     document.getElementById("remove-output").addEventListener('click',()=>{
         document.querySelector("#result").innerHTML = `
         <h2 style="display: none;" id="questions-result">Questions:</h2>
             <p id="result-p" style="display: none;"></p>
         `
         submitt.disabled = false;
+        document.getElementById('showanswer').disabled = false;
+    })
+    document.getElementById('showanswer').addEventListener('click', ()=>{
+        document.getElementById('showanswer').disabled = true;
+        for(let i=0;i<questions.length;i++){
+            const answerbp = `
+                <div class="answers">
+                ${i +1}. ${questions[i].answer}
+                </div>
+                `;
+                document.querySelector("#result").insertAdjacentHTML('beforeend',answerbp);
+        }
     })
             }
         })
