@@ -7,13 +7,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
         formdata = new FormData(form);
         const category = formdata.get('categoryy');
         const name = document.querySelector('input[type="text"]').value;
-        const limit = document.querySelector('input[type="number"').value;
+        const limit = document.querySelector('input[type="number"]').value;
         const difficulty = formdata.get("difficulty");
         const result = document.querySelector('#result');
         console.log("limit");
         if(limit>20){
             alert("Please enter a value under 20!");
         }else{
+            submitt.disabled= true;
         console.log(name);
         console.log(category);
         fetch('/save',{
@@ -33,11 +34,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 const questions = result.questions;
                 console.log(questions);
                 console.log(name);
-        document.querySelector("#result").style.visiblity = "visible";
-        document.querySelector("#questions-result").style.visiblity = "visible";
+        document.querySelector("#result").style.visibility = "visible";
+        document.querySelector("#questions-result").style.visibility = "visible";
         const rp = document.querySelector("#result-p")
         rp.style.display = "revert";
-        rp.innerText = `Here are your questions <b> ${namee} </b>`;
+        rp.innerHTML = `Here are your questions <b> ${namee} </b>`;
                 const remove = `
                 <button id="remove-output"> Remove </button>
                 `
@@ -51,8 +52,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
     const result2 = document.querySelector("#result");
     document.querySelector("#result").insertAdjacentHTML('beforeend',remove);
-    document.querySelector("#remove-output").addEventListener('click',()=>{
-        document.querySelector.querySelector("#result").style.visiblity = "hidden";
+    document.getElementById("remove-output").addEventListener('click',()=>{
+        document.querySelector("#result").innerHTML = `
+        <h2 style="display: none;" id="questions-result">Questions:</h2>
+            <p id="result-p" style="display: none;"></p>
+        `
         submitt.disabled = false;
     })
             }
